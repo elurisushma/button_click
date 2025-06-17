@@ -8,7 +8,6 @@
     body {
       min-height: 100vh;
       margin: 0;
-      background-image: linear-gradient(rgb(238, 130, 161), pink);
       background-size: cover;
       display: flex;
       flex-direction: column;
@@ -41,11 +40,15 @@
   <button onclick="inc()">Click Me</button>
   <p id="count">Number: 0</p>
 
+<video autoplay muted loop id="bg-video" style="position:fixed; top:0; left:0; min-width:100%; min-height:100%; object-fit:cover; z-index:-1;">
+  <source src="bg_.mp4" type="video/mp4">
+</video>
+
   <script>
     let count = 0;
     function inc() {
       count += 1;
-      document.getElementById("count").innerText = "Number: " + count;
+      document.getElementById("count").innerText = "clicked: " + count;
     }
   </script>
 </body>
